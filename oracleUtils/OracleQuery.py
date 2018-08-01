@@ -26,9 +26,14 @@ class OracleQuery :
                 cur.callproc(query, [14032, refCursorVar] )
                 queryResult = QueryResult() 
                 refCursor = refCursorVar.getvalue()
+                #Populate Columns
                 for column in refCursor.description:
                    columnDefn = OracleDbColumn(column[0])
                    queryResult.addColumns(columnDefn)
+                #Populate Rows
+                for row in refCursor:
+                    noOfRowIndexes = len(row)
+                    dataRow = row
                 return queryResult
         except Exception as e: 
             print("Exception: " + str(e))
