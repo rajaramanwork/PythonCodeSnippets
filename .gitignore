@@ -1,0 +1,8 @@
+.vs
+pythonutils.testharness/.pytest_cache/v/cache/nodeids
+pythonutils.testharness/.pytest_cache/v/cache/stepwise
+pythonutils.testharness\__pycache__
+TestResults
+
+*.user
+*.pyc
