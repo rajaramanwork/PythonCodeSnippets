@@ -109,3 +109,42 @@ def test_oracleprocedure():
     except Exception as e : 
         print('Something went wrong. check Log')
         print(str(e))
+
+def test_oracleprocedurewithoutput():
+    """
+        Oracle Procedure Calls with Binding
+    """
+    try:
+        _oracle_utils =  oracle_utils.OracleUtils("SAMPLEDB_ADMIN", "localhost", "xe", "SAMPLEDB_ADMIN", "fighter70")
+        params = [] #parameters are positional 
+    
+        #One input Parameter and Two Output Parameters 
+        params.append(oracle_param.OracleParameter("p_city", "string", "input", "edison"))
+        params.append(oracle_param.OracleParameter("p_avg_salary", "int", "output", None))
+        params.append(oracle_param.OracleParameter("p_highest_sal", "int", "output", None))
+        columns, rows = _oracle_utils.execute_proc("SAMPLEDB_ADMIN.PKG_CUSTOMERS_API.p_get_customers_sal", params)
+        for x in params:
+            if (x.direction == 'output'):
+                print(x.name + ':' + str(x.value))
+    except Exception as e : 
+        print('Something went wrong. check Log')
+        print(str(e))
+
+def test_oraclefunction():
+    """
+        Oracle Procedure Calls with Binding
+    """
+    try:
+        _oracle_utils =  oracle_utils.OracleUtils("SAMPLEDB_ADMIN", "localhost", "xe", "SAMPLEDB_ADMIN", "fighter70")
+        params = [] #parameters are positional 
+    
+        #One input Parameter and Two Output Parameters 
+        params.append(oracle_param.OracleParameter("p_customer_id", "int", "input", "2"))
+        params.append(oracle_param.OracleParameter("p_city_name", "string", "return", None))
+        _oracle_utils.execute_func("SAMPLEDB_ADMIN.PKG_CUSTOMERS_API.fn_get_customer_code", params)
+        for x in params:
+            if (x.direction == 'return'):
+                print(x.name + ':' + str(x.value))
+    except Exception as e : 
+        print('Something went wrong. check Log')
+        print(str(e))
