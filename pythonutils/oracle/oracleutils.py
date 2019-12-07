@@ -1,6 +1,6 @@
 import cx_Oracle
 import oracle.oraclecolumntype as oracle_column_type
-import logging.loggingutils  as logging_utils
+import logger.loggingutils  as logging_utils
 
 class OracleUtils:
     def __init__(self, dbSchema, dbHost, dbServiceName, dbLogin, dbPassword ):

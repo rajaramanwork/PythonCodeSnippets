@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>ed735cac-98a5-4f8f-9870-b905ce7cdd59</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>test_fileoperations.py</StartupFile>
+    <StartupFile>test_objectcreations.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -24,8 +24,15 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="dto\consultant.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="dto\employee.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="test_fileoperations.py" />
     <Compile Include="test_logging.py" />
+    <Compile Include="test_objectcreations.py" />
     <Compile Include="test_xunit.py" />
     <Compile Include="test_stub.py" />
     <Compile Include="uttest_stub.py">
@@ -41,6 +48,9 @@
       <Project>{1093bbe1-2c31-499c-a79a-1a08d5cd5016}</Project>
       <Private>True</Private>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="dto\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
