@@ -1,10 +1,10 @@
 import csv
-import logging.loggingutils  as logging_utils
+import logger.loggingutils  as logging_utils
 
 class FileUtils:
     def __init__(self):
         try:
-            self._logger = logging_utils.LoggingUtils('C:\Data\Professional\SourceCode\PythonCodeSnippets\pythonutils\logging\logging.json')
+            self._logger = logging_utils.LoggingUtils('C:\Data\Professional\SourceCode\PythonCodeSnippets\pythonutils\logger\logging.json')
             self._logger.get_logger(__name__)
         except Exception as e:
             error, = e.args

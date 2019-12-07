@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>ed735cac-98a5-4f8f-9870-b905ce7cdd59</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>test_logging.py</StartupFile>
+    <StartupFile>test_fileoperations.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -24,6 +24,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="test_fileoperations.py" />
     <Compile Include="test_logging.py" />
     <Compile Include="test_xunit.py" />
     <Compile Include="test_stub.py" />
