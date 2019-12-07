@@ -25,7 +25,7 @@
     <Compile Include="file\fileutils.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="logging\loggingutils.py">
+    <Compile Include="logger\loggingutils.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="oracle\oracleutils.py" />
@@ -36,11 +36,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="file\" />
-    <Folder Include="logging\" />
+    <Folder Include="logger\" />
     <Folder Include="oracle\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="logging\logging.json" />
+    <Content Include="logger\logging.json" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
