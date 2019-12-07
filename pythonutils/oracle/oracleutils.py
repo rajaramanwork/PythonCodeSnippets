@@ -4,7 +4,7 @@ import logger.loggingutils  as logging_utils
 
 class OracleUtils:
     def __init__(self, dbSchema, dbHost, dbServiceName, dbLogin, dbPassword ):
-        self._logger = logging_utils.LoggingUtils('C:\workarea\SourceCode\python\PythonUtils\logger\logging.json')
+        self._logger = logging_utils.LoggingUtils('C:\Data\Professional\SourceCode\PythonCodeSnippets\pythonutils\logger\logging.json')
         self._logger.get_logger(__name__)
         try:
             self._dbConn = cx_Oracle.connect(dbSchema, dbPassword, dbHost + '/' + dbServiceName)

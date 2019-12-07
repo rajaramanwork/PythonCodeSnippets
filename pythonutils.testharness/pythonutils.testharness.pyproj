@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>ed735cac-98a5-4f8f-9870-b905ce7cdd59</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>test_fileoperations.py</StartupFile>
+    <StartupFile>test_oracle.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -30,6 +30,7 @@
     <Compile Include="dto\employee.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="test_oracle.py" />
     <Compile Include="test_fileoperations.py" />
     <Compile Include="test_logging.py" />
     <Compile Include="test_decorators.py" />
